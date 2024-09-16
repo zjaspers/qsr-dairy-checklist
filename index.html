@@ -39,93 +39,108 @@
             background-color: #e7f3fe;
             border-left: 6px solid #2196F3;
         }
+        input[type="text"], input[type="date"], input[type="number"] {
+            width: 100%;
+            padding: 6px;
+            box-sizing: border-box;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
     </style>
 </head>
 <body>
     <h1>Coffee Shop Dairy Ingredients Best-By Date Checklist</h1>
     
-    <table>
-        <tr>
-            <th>Dairy Item</th>
-            <th>Unopened Shelf Life</th>
-            <th>Opened Shelf Life</th>
-            <th>Date Opened</th>
-            <th>Use By Date</th>
-            <th>Checked By</th>
-        </tr>
-        <tr>
-            <td>Whole Milk</td>
-            <td>5-7 days past printed date</td>
-            <td>5-7 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Skim Milk</td>
-            <td>5-7 days past printed date</td>
-            <td>5-7 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Half and Half</td>
-            <td>7-10 days past printed date</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Heavy Cream</td>
-            <td>7-10 days past printed date</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Almond Milk (shelf-stable, unopened)</td>
-            <td>Best by date on carton</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Soy Milk (shelf-stable, unopened)</td>
-            <td>Best by date on carton</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Oat Milk (shelf-stable, unopened)</td>
-            <td>Best by date on carton</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Liquid Coffee Creamer</td>
-            <td>Best by date on bottle</td>
-            <td>7-14 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td>Whipped Cream (aerosol can)</td>
-            <td>Best by date on can</td>
-            <td>7-10 days</td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+    <form id="checklistForm">
+        <table>
+            <thead>
+                <tr>
+                    <th>Dairy Item</th>
+                    <th>Unopened Shelf Life</th>
+                    <th>Opened Shelf Life</th>
+                    <th>Date Opened</th>
+                    <th>Use By Date</th>
+                    <th>Checked By</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Whole Milk</td>
+                    <td>5-7 days past printed date</td>
+                    <td>5-7 days</td>
+                    <td><input type="date" name="wholeMilkDateOpened"></td>
+                    <td><input type="date" name="wholeMilkUseByDate"></td>
+                    <td><input type="text" name="wholeMilkCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Skim Milk</td>
+                    <td>5-7 days past printed date</td>
+                    <td>5-7 days</td>
+                    <td><input type="date" name="skimMilkDateOpened"></td>
+                    <td><input type="date" name="skimMilkUseByDate"></td>
+                    <td><input type="text" name="skimMilkCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Half and Half</td>
+                    <td>7-10 days past printed date</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="halfAndHalfDateOpened"></td>
+                    <td><input type="date" name="halfAndHalfUseByDate"></td>
+                    <td><input type="text" name="halfAndHalfCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Heavy Cream</td>
+                    <td>7-10 days past printed date</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="heavyCreamDateOpened"></td>
+                    <td><input type="date" name="heavyCreamUseByDate"></td>
+                    <td><input type="text" name="heavyCreamCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Almond Milk (shelf-stable, unopened)</td>
+                    <td>Best by date on carton</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="almondMilkDateOpened"></td>
+                    <td><input type="date" name="almondMilkUseByDate"></td>
+                    <td><input type="text" name="almondMilkCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Soy Milk (shelf-stable, unopened)</td>
+                    <td>Best by date on carton</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="soyMilkDateOpened"></td>
+                    <td><input type="date" name="soyMilkUseByDate"></td>
+                    <td><input type="text" name="soyMilkCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Oat Milk (shelf-stable, unopened)</td>
+                    <td>Best by date on carton</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="oatMilkDateOpened"></td>
+                    <td><input type="date" name="oatMilkUseByDate"></td>
+                    <td><input type="text" name="oatMilkCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Liquid Coffee Creamer</td>
+                    <td>Best by date on bottle</td>
+                    <td>7-14 days</td>
+                    <td><input type="date" name="creamerDateOpened"></td>
+                    <td><input type="date" name="creamerUseByDate"></td>
+                    <td><input type="text" name="creamerCheckedBy" placeholder="Your name"></td>
+                </tr>
+                <tr>
+                    <td>Whipped Cream (aerosol can)</td>
+                    <td>Best by date on can</td>
+                    <td>7-10 days</td>
+                    <td><input type="date" name="whippedCreamDateOpened"></td>
+                    <td><input type="date" name="whippedCreamUseByDate"></td>
+                    <td><input type="text" name="whippedCreamCheckedBy" placeholder="Your name"></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <button type="submit" style="margin-top: 20px; padding: 10px 20px;">Submit Checklist</button>
+    </form>
 
     <div class="notes">
         <h3>Important Notes:</h3>
